@@ -1,0 +1,51 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import PageShell from "../PageShell.astro";
+import { profileLinks } from "../../config/site";
+import type { Locale } from "../../i18n";
+import { localizedPath, ui } from "../../i18n";
+import SocialLinks from "../SocialLinks.astro";
+
+interface Props { locale?: Locale }
+const locale = Astro.props.locale ?? "en";
+const copy = ui[locale].contact;
+---
+<MainLayout title={copy.name} description={copy.summary} canonical={localizedPath(locale, "/contact")} locale={locale}>
+  <PageShell>
+    <Fragment slot="page-name">{copy.name}</Fragment>
+    <Fragment slot="page-title">{copy.title}</Fragment>
+    <Fragment slot="page-summary">{copy.summary}</Fragment>
+
+    <section slot="one-column" class="grid gap-8 py-8 lg:grid-cols-[1fr_1fr]">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.18em] text-black/50">{copy.position}</p>
+        <h2 class="mt-4 font-serif text-4xl font-bold">{ui[locale].identity.fullName}</h2>
+        <p class="mt-4 text-base leading-7 text-black/75">
+          {copy.department}<br />
+          {copy.institution}<br />
+          {copy.location}
+        </p>
+        <div class="mt-8 grid gap-4">
+          <article class="border border-black/15 bg-white p-5">
+            <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-black/55">{ui[locale].footer.email}</h3>
+            <a class="mt-2 inline-block text-base font-semibold underline underline-offset-4" href="mailto:mail@tskaneva.com">mail@tskaneva.com</a>
+          </article>
+          <article class="border border-black/15 bg-white p-5">
+            <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-black/55">{copy.office}</h3>
+            <p class="mt-2 text-base font-semibold">6.408Б, {copy.institution}</p>
+          </article>
+          <article class="border border-black/15 bg-white p-5">
+            <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-black/55">{copy.officeHours}</h3>
+            <p class="mt-2 text-base font-semibold">{copy.officeHoursText}</p>
+          </article>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-serif text-3xl font-bold">{copy.profiles}</h2>
+        <div class="mt-6">
+          <SocialLinks links={profileLinks} />
+        </div>
+      </div>
+    </section>
+  </PageShell>
+</MainLayout>

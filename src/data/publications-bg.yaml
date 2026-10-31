@@ -1,0 +1,881 @@
+- id: "pub-001"
+  year: 2026
+  type: "Article"
+  title: " Methodology for Identifying Soiling on PV Panels Using RGB Images and Deep Learning"
+  authors: "Gabrovska-Evstatieva, K., T. Kaneva, I. Valova, D. Trifonov, N. Valov, V. Keseev, N. Mihailov, B. Evstatiev"
+  venue: "International Journal of Advanced Computer Science and Applications (IJACSA), 2026, No 17(5), pp. 647-655, ISSN 2156-5570 (Impact factor: 0.9 /2024, Web of Science, Q3)"
+  indexed: 
+    - "Web of Science"
+    - "Scopus"
+  links:
+    - label: "Publisher"
+      href: "https://thesai.org/Publications/ViewPaper?Volume=17&Issue=5&Code=IJACSA&SerialNo=60"
+
+- id: "pub-002"
+  year: 2026
+  type: "Conference Paper"
+  title: "AI Knowledge and Usage Patterns in Primary and Secondary Education: An Empirical Survey"
+  authors: "Todorova, N., I. Valova, T. Kaneva"
+  venue: "25th International Symposium INFOTEH-JAHORINA (INFOTEH), East Sarajevo, Bosnia and Herzegovina, IEEE, 2026, pp. 1-5, ISBN 979-8-3315-6964-8"
+  indexed: 
+    - "Scopus"
+  links: []
+
+- id: "pub-003"
+  year: 2026
+  type: "Conference Paper"
+  title: "A Conceptual Model for an Intelligent Edge—Cloud Decision Support System for Residential Photovoltaic Management"
+  authors: "Kaneva, T., I. Valova, B. Evstatiev, G. Kanev, K. Gabrovska-Evstatieva, N. Valov"
+  venue: "25th International Symposium INFOTEH-JAHORINA (INFOTEH), East Sarajevo, Bosnia and Herzegovina, IEEE, 2026, pp. 1-5, ISBN 979-8-3315-6964-8"
+  indexed:
+    - "Scopus"
+  links:
+    - label: "IEEE Xplore"
+      href: "https://ieeexplore.ieee.org/document/11477722"
+
+- id: "pub-004"
+  year: 2025
+  type: "Conference Paper"
+  title: "Data Cleaning: Methods, Challenges, and Practices for Improving Data Quality"
+  authors: "Valova, I., T. Kaneva, G. Kanev, T. Halacheva"
+  venue: "2025 6th International Conference on Communications, Information, Electronic and Energy Systems (CIEES), Ruse, Bulgaria, IEEE, 2025, pp. 1-6, ISBN 979-8-3315-0119-8"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-005"
+  year: 2025
+  type: "Conference Paper"
+  title: "Automatic Extraction and Analysis of Text and Stylistic Features of PDF Documents"
+  authors: "Valova, I., T. Kaneva, T. Halacheva"
+  venue: "10th International Conference on Energy Efficiency and Agricultural Engineering, EE and AE 2025, Institute of Electrical and Electronics Engineers Inc., 2025, ISBN 9798331512996"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-006"
+  year: 2025
+  type: "Conference Paper"
+  title: "Deep Learning for PV Power Forecasting: An LSTM Approach for Residential Systems"
+  authors: "Kaneva, Ts., N. Valov, I. Valova"
+  venue: "2025 IEEE 31st International Symposium for Design and Technology in Electronic Packaging (SIITME), Brasov, Romania, IEEE, 2025, pp. 1-5, ISBN 979-8-3315-6869-6"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-007"
+  year: 2025
+  type: "Conference Paper"
+  title: "A Conceptual Model for a Photovoltaic Energy Monitoring and Forecasting System"
+  authors: "Valova, I., Ts. Kaneva, G. Kanev"
+  venue: "2025 10th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE), Stara Zagora, Bulgaria, IEEE, 2025, pp. 1-5, ISBN 979-8-3315-1299-6"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-008"
+  year: 2025
+  type: "Conference Paper"
+  title: "A Prototype IoT-Based Modular Electronic System for Home Automation"
+  authors: "Tsankov, V., B. Evstatiev, I. Valova, T. Kaneva"
+  venue: "2025 IEEE 31st International Symposium for Design and Technology in Electronic Packaging (SIITME), Brasov, Romania, IEEE, 2025, pp. 357-361, ISBN 979-8-3315-6869-6"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-009"
+  year: 2025
+  type: "Conference Paper"
+  title: "Analysis of the Performance of Bifacial Photovoltaic Panels with Different Reflective Surfaces in Urban Conditions"
+  authors: "Kaneva, T., I. Valova, N. Valov, B. Evstatiev, V. Keseev, D. Trifonov, N. Mihailov"
+  venue: "2025 10th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE), Stara Zagora, Bulgaria, IEEE, 2025, pp. 1-5, ISBN 979-8-3315-1299-6"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-010"
+  year: 2025
+  type: "Conference Paper"
+  title: "A Multidisciplinary Project-Based Approach to Engineering Education: Design and Development of a Portable Music Player"
+  authors: "Velikov, V., T. Kaneva, I. Valova, D. Trifonov, G. Georgiev"
+  venue: "19th International Conference on Electrical Machines, Drives and Power Systems, ELMA 2025, Institute of Electrical and Electronics Engineers Inc., 2025, ISBN 9798331526368"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-011"
+  year: 2025
+  type: "Conference Paper"
+  title: "An Educational Innovative Platform for Research and Training in Solar Energy"
+  authors: "Evstatiev, B., N. Valov, T. Kaneva, I. V. Banu, G. Culea, N. Mihailov"
+  venue: "2025 19th Conference on Electrical Machines, Drives and Power Systems (ELMA), Sofia, Bulgaria, IEEE, 2025, pp. 80-84, ISBN 979-8-3315-2636-8"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-012"
+  year: 2025
+  type: "Journal Article"
+  title: "24 Hours Ahead Forecasting of the Power Consumption in an Industrial Pig Farm Using Deep Learning"
+  authors: "Evstatiev, B., N. Valov, K. Gabrovska-Evstatieva, I. Valova, T. Kaneva, N. Mihailov"
+  venue: "Energies, 2025, 18(15), pp. 1-20, ISSN 1996-1073"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+
+- id: "pub-013"
+  year: 2025
+  featured: true
+  type: "Journal Article"
+  title: "A Data-Driven Approach for Generating Synthetic Load Profiles with GANs"
+  authors: "Kaneva, T., I. Valova, K. Gabrovska-Evstatieva, B. Evstatiev"
+  venue: "Applied Sciences, 2025, 15(14), pp. 1-36, ISSN 2076-3417"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+
+- id: "pub-014"
+  year: 2025
+  type: "Journal Article"
+  title: "Generation of Realistic Synthetic Load Profile Based on the Markov Chains Theory: Methodology and Case Studies"
+  authors: "Valova, I., K. Gabrovska-Evstatieva, T. Kaneva, B. Evstatiev"
+  venue: "Algorithms, 2025, 18(5), pp. 1-24, ISSN 1999-4893"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+- id: "pub-015"
+  year: 2024
+  type: "Conference Paper"
+  title: "Analysis of Energy Potential of Micro Wind Turbines at Three Locations in the Central-Eastern Part of the Bulgarian Danube River Region"
+  authors: "Valov, N., K. Gabrovska-Evstatieva, I. Stoyanov, T. Kaneva, S. Kadirova, B. Evstatiev, N. Mihailov"
+  venue: "2024 5th International Conference on Communications, Information, Electronic and Energy Systems (CIEES 2024), Veliko Tarnovo, Bulgaria, IEEE, 2024, pp. 1-4, ISBN 979-8-3503-5286-3"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-016"
+  year: 2024
+  type: "Conference Paper"
+  title: "Analysis of the PV Energy Potential in the Bulgarian Danube River Region between Ruse and Silistra"
+  authors: "Gabrovska-Evstatieva, K., I. Stoyanov, T. Kaneva, N. Valov, V. Tsankov, B. Evstatiev, N. Mihailov"
+  venue: "2024 5th International Conference on Communications, Information, Electronic and Energy Systems (CIEES 2024), Veliko Tarnovo, Bulgaria, IEEE, 2024, pp. 1-6, ISBN 979-8-3503-5286-3"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-017"
+  year: 2024
+  type: "Conference Paper"
+  title: "Models and Methodologies for Collecting, Processing, and Storing Heterogeneous IoT Data in the Field of Renewable Energy – A Review"
+  authors: "Valova, I., Ts. Kaneva, Ts. Halacheva, N. Valov, Ts. Georgiev"
+  venue: "5th International Conference on Communications, Information, Electronic and Energy Systems (CIEES 2024), Veliko Tarnovo, Bulgaria, IEEE, 2024, pp. 1-7, ISBN 979-8-3503-5286-3"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-018"
+  year: 2024
+  type: "Conference Paper"
+  title: "An Overview of Monitoring Systems, Methods, and Technologies for Hybrid Renewable Energy Sources"
+  authors: "Kaneva, Ts., I. Valova, Ts. Halacheva"
+  venue: "CIEES 2024, Veliko Tarnovo, Bulgaria, IEEE, 2024, pp. 1-7, ISBN 979-8-3503-5286-3"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-019"
+  year: 2024
+  type: "Conference Paper"
+  title: "Application of IoT Technologies as a University Project for Students: Challenges and Possibilities"
+  authors: "Kaneva, Ts., I. Valova"
+  venue: "2024 IEEE 30th International Symposium for Design and Technology in Electronic Packaging (SIITME), Sibiu, Romania, IEEE Xplore, 2024, pp. 1-5, ISBN 979-8-3315-3951-1"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-020"
+  year: 2024
+  type: "Conference Paper"
+  title: "Conceptual Model of a Parking System with Automatic License Plate Recognition"
+  authors: "Valova, I., Ts. Kaneva, N. Valov"
+  venue: "2024 IEEE 30th International Symposium for Design and Technology in Electronic Packaging (SIITME 2024), Sibiu, Romania, IEEE, 2024, pp. 168-173, ISBN 979-8-3315-3951-1"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-021"
+  year: 2024
+  type: "Conference Paper"
+  title: "Study of the Application of Logistic Regression and Naïve Bayes Algorithms for Automatic Classification of User Reviews in Bulgarian"
+  authors: "Valova, I., G. Kanev, Ts. Kaneva"
+  venue: "8th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT), Ankara, Turkiye, IEEE, 2024, pp. 1-6, ISBN 979-8-3503-5442-3"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-022"
+  year: 2024
+  type: "Conference Paper"
+  title: "Comparing Different Evaluation Metrics with the Grid Search Method for Classification of Highly Imbalanced Data"
+  authors: "Kaneva, Ts., B. Evstatiev, I. Valova, N. Valov, K. Gabrovska-Evstatieva"
+  venue: "8th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT 2024), Ankara, Turkiye, IEEE, 2024, pp. 1-5, ISBN 979-8-3503-5442-3, ISSN 2770-7962"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-023"
+  year: 2024
+  type: "Conference Paper"
+  title: "Multisensor System for Measuring Air Components in Intelligent Animal Husbandry"
+  authors: "Danev, V., T. Atanasova, K. Dineva, I. Blagoev, P. Petrov, N. Markov, M. Hristov, S. Stoycheva, L. Mondeshka, I. Valova, N. Valov, Ts. Mladenova"
+  venue: "9th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE), Ruse, Bulgaria, IEEE, 2024, pp. 1-4, ISBN 979-8-3503-6938-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-024"
+  year: 2024
+  type: "Conference Paper"
+  title: "Design and Development of an Experimental Photovoltaic System"
+  authors: "Keseev, V., N. Mihailov, B. Evstatiev, T. Mladenova, V. Hinkov and N. Valov"
+  venue: "2024 9th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE), Ruse, Bulgaria, IEEE, 2024, pp. 1-6, ISBN 979-8-3503-6938-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-025"
+  year: 2024
+  type: "Conference Paper"
+  title: "Training of Professionals on PV Systems in Bulgaria"
+  authors: "Evstatiev, B. I., N. Valov, T. Mladenova, V. Hinkov, N. Mihailov"
+  venue: "2024 9th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE), Ruse, Bulgaria, IEEE, 2024, pp. 1-5, ISBN 979-8-3503-6938-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-026"
+  year: 2024
+  type: "Conference Paper"
+  title: "Analyzing Methods for Classification of Electronic Word-of-Mouth: A Review"
+  authors: "Kanev, G., T. Mladenova, I. Valova"
+  venue: "2024 Cognitive Models and Artificial Intelligence Conference (AICCONF 2024), Association for Computing Machinery, 2024, pp. 85-89, ISBN 9798400716928"
+  indexed:
+    - "ACM Digital Library"
+  links: []
+
+- id: "pub-027"
+  year: 2024
+  type: "Journal Article"
+  title: "Evaluation of the Optimal Features and Machine Learning Algorithms for Energy Yield Forecasting of a Rural Rooftop PV Installation"
+  authors: "Evstatiev, B., K. Gabrovska-Evstatieva, T. Kaneva, N. Valov, N. Mihailov"
+  venue: "International Journal of Advanced Computer Science and Applications (IJACSA), 2024, 15(11), pp. 568-580, ISSN 2156-5570"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+
+- id: "pub-028"
+  year: 2024
+  type: "Journal Article"
+  title: "Identification of Pasture Degradation Using Remote Sensing Data and Machine Learning: A Case Study of Obichnik"
+  authors: "Evstatiev, B., I. Valova, T. Kaneva, N. Valov, A. Sevov, G. Stanchev, G. Komitov, T. Zhelyazkova, M. Gerdzhikova, M. Todorova, N. Grozeva, D. Saliev, I. Damyanov"
+  venue: "Applied Sciences, 2024, 14(17), pp. 1-15, ISSN 2076-3417"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+
+- id: "pub-029"
+  year: 2024
+  type: "Journal Article"
+  featured: true
+  title: "Evaluation of the Efficiency of Machine Learning Algorithms for Identification of Cattle Behavior Using Accelerometer and Gyroscope Data"
+  authors: "Mladenova, T., I. Valova, B. Evstatiev, N. Valov, I. Varlyakov, T. Markov, S. Stoycheva, L. Mondeshka, N. Markov"
+  venue: "AgriEngineering, 2024, 6(3), pp. 1-19, ISSN 2624-7402"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+
+- id: "pub-030"
+  year: 2024
+  type: "Journal Article"
+  title: "Students' Perception of ChatGPT Usage in Education"
+  authors: "Valova, I., Ts. Mladenova, G. Kanev"
+  venue: "International Journal of Advanced Computer Science and Applications (IJACSA), 2024, 15, pp. 466-473, ISSN 2156-5570"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+
+- id: "pub-031"
+  year: 2024
+  type: "Journal Article"
+  title: "Design of an Experimental Facility for Thermographic Analysis of Photovoltaic Installations"
+  authors: "Keseev, V., B. Evstatiev, N. Mihailov, T. Mladenova, V. Hinkov"
+  venue: "Engineering Proceedings, 2024, 60(1), pp. 1-10, ISSN 2673-4591"
+  indexed:
+    - "Scopus"
+  links: []
+
+- id: "pub-032"
+  year: 2024
+  type: "Book"
+  title: "Tests for the State Matriculation Exam in Informatics – Specialized Preparation. Curriculum 2023/2024"
+  authors: "Irena Valova, Tsvetelina Mladenova, Klavdia Petrova"
+  venue: "Sofia, PROSVETA, 2024, 150 pages, ISBN BKTB0010329N"
+  indexed: []
+  links: []
+
+- id: "pub-033"
+  year: 2024
+  type: "Monograph"
+  title: "Application of Machine Learning Methods and Algorithms for Animal Behavior Recognition"
+  authors: "Kaneva, Tsv."
+  venue: "Ruse, Bryag Media Group Ltd., 2024, 126 pages, ISBN 978-619-92721-1-4"
+  indexed: []
+  links: []
+
+- id: "pub-034"
+  year: 2024
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Designing a 2D Platformer Computer Game"
+  authors: "Nedelchev, M., Ts. Mladenova"
+  venue: "Proceedings of University of Ruse, Volume 63, Book 3.3, Ruse, University of Ruse, 2024, pp. 269-273, ISSN 2603-4123"
+  indexed: []
+  links: []
+
+- id: "pub-035"
+  year: 2024
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Plant Recognition Algorithms Research"
+  authors: "Dimitrov, K., I. Valova, Ts. Mladenova"
+  venue: "Proceedings of University of Ruse, Volume 63, Book 3.3, Ruse, University of Ruse, 2024, pp. 263-268, ISSN 2603-4123"
+  indexed: []
+  links: []
+
+- id: "pub-036"
+  year: 2023
+  type: "Conference Paper"
+  title: "Investigation of the Accuracy of Thermographic Inspections of Photovoltaic Modules"
+  authors: "Evstatiev, B., N. Valov, K. Gabrovska-Evstatieva, T. Mladenova, N. Mihailov"
+  venue: "2023 IEEE 29th International Symposium for Design and Technology in Electronic Packaging (SIITME 2023), Craiova, Romania, IEEE, 2023, pp. 1-6, ISBN 979-8-3503-4411-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-037"
+  year: 2023
+  type: "Conference Paper"
+  title: "Web Scraping - State of the Art, Techniques and Approaches"
+  authors: "Valova, I., Ts. Mladenova, G. Kanev, Ts. Halacheva"
+  venue: "31st National Conference with International Participation (TELECOM), Sofia, Bulgaria, IEEE, 2023, pp. 1-4, ISBN 979-8-3503-0329-2, ISSN 2837-5246"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-038"
+  year: 2023
+  type: "Conference Paper"
+  title: "Design of a Smart System for Street Light Monitoring and Control"
+  authors: "Valov, N., M. Deyanov, S. Nyagolov, I. Valova, D. Ivanova, T. Mladenova, O. Petrov, V. Tsanknov"
+  venue: "7th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT 2023), Ankara, Turkiye, IEEE, 2023, pp. 1-4, ISBN 979-8-3503-4215-4"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-039"
+  year: 2023
+  type: "Conference Paper"
+  title: "System for String Monitoring in Small Experimental PV Plants"
+  authors: "Valov, N., B. Evstatiev, T. Mladenova, V. Hinkov, N. Mihailov"
+  venue: "2023 18th Conference on Electrical Machines, Drives and Power Systems (ELMA), Varna, Bulgaria, IEEE, 2023, pp. 1-5, ISBN 979-8-3503-1127-3"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-040"
+  year: 2023
+  type: "Conference Paper"
+  title: "Smart Home Based on IoT - Architecture and Practices"
+  authors: "Mladenova, T., V. Cankov"
+  venue: "5th International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA 2023), Institute of Electrical and Electronics Engineers Inc., 2023, ISBN 9798350337525"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-041"
+  year: 2023
+  type: "Conference Paper"
+  title: "A Review of the Application of Machine Learning in Home Automation"
+  authors: "Mladenova, T., I. Valova"
+  venue: "5th International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA 2023), Institute of Electrical and Electronics Engineers Inc., 2023, ISBN 9798350337525"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-042"
+  year: 2023
+  type: "Conference Paper"
+  title: "Leveraging User Experience for Enhancing Product Design: A Study of Data Collection and Evaluation"
+  authors: "Kanev, G., T. Mladenova, I. Valova"
+  venue: "5th International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA 2023), Institute of Electrical and Electronics Engineers Inc., 2023, ISBN 9798350337525"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-043"
+  year: 2023
+  type: "Journal Article"
+  title: "Fast Pasture Classification Method using Ground-based Camera and the Modified Green Red Vegetation Index (MGRVI)"
+  authors: "Evstatiev, B., Ts. Mladenova, N. Valov, Ts. Zhelyazkova, M. Gerdzhikova, M. Todorova, N. Grozeva, A. Sevov, G. Stanchev"
+  venue: "International Journal of Advanced Computer Science and Applications (IJACSA), 2023, 14(6), pp. 45-51, ISSN 2156-5570"
+  indexed:
+    - "Web of Science"
+    - "Scopus"
+  links: []
+
+- id: "pub-044"
+  year: 2023
+  type: "Journal Article"
+  title: "Classification with K-Nearest Neighbors Algorithm: Comparative Analysis between the Manual and Automatic Methods for K-Selection"
+  authors: "Mladenova, T., I. Valova"
+  venue: "International Journal of Advanced Computer Science and Applications (IJACSA), 2023, pp. 396-404, ISSN 2156-5570"
+  indexed:
+    - "Scopus"
+  links: []
+
+- id: "pub-045"
+  year: 2023
+  type: "Textbook"
+  title: "Relational Databases"
+  authors: "Mladenova, Tsv., I. Valova"
+  venue: "Ruse, Bryag Media Group, 2023, 102 pages, ISBN 978-619-90584-9-7"
+  indexed: []
+  links: []
+
+- id: "pub-046"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Development of a Japanese Learning Application"
+  authors: "Zdravkov, V., Ts. Mladenova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 209-213, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-047"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Development of an Arcade Game Based on the Roswell Case"
+  authors: "Nikolov, M., Ts. Mladenova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 202-206, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-048"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Usage of Big Data in Ecology"
+  authors: "Espinoza, M., Ts. Mladenova, I. Valova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 199-201, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-049"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Application of the Educational Game 'UNI FROM HELL' to Enhance Student Learning"
+  authors: "Stoykov, R., Ts. Mladenova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 151-156, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-050"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Digital Collectors Checklists"
+  authors: "Georgiev, P., Ts. Mladenova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 144-150, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-051"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "The Use of Cloud Technologies in the Field of Healthcare"
+  authors: "Halacheva, Ts., Ts. Mladenova, I. Valova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 132-137, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-052"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "System for Soil Measurements"
+  authors: "Ivanov, A., Ts. Mladenova, I. Valova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 124-131, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-053"
+  year: 2023
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Smart Home 1.0"
+  authors: "Fehim, S., K. Dimitrov, Ts. Mladenova, I. Valova"
+  venue: "Proceedings of the University of Ruse, Volume 62, Book 3.3, Ruse, University of Ruse, 2023, pp. 80-87, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-054"
+  year: 2022
+  type: "Conference Paper"
+  title: "Performance Study of MySQL and MongoDB for IoT Data Processing and Storage"
+  authors: "Mladenova, T., I. Valova"
+  venue: "2022 International Conference Automatics and Informatics (ICAI 2022), Varna, Bulgaria, Institute of Electrical and Electronics Engineers Inc., 2022, pp. 60-63, ISBN 9781665476256"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-055"
+  year: 2022
+  type: "Conference Paper"
+  title: "Comparative Analysis between the Traditional K-Nearest Neighbor and Modifications with Weight-Calculation"
+  authors: "Mladenova, T., I. Valova"
+  venue: "6th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT 2022), Turkey, Institute of Electrical and Electronics Engineers Inc., 2022, pp. 961-965, ISBN 9781665470131"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-056"
+  year: 2022
+  type: "Conference Paper"
+  title: "Study of the Influence of Natural Lighting on the Consumed Electricity for Street Lighting in a Medium-Sized City"
+  authors: "Valov, N., S. Nyagolov, T. Mladenova, I. Valova, D. Ivanova"
+  venue: "International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT), Ankara, Turkey, IEEE, 2022, pp. 957-960, ISBN 978-1-6654-7013-1"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-057"
+  year: 2022
+  type: "Conference Paper"
+  title: "An Information System for Livestock and Pasture Surveillance"
+  authors: "Valova, I., T. Mladenova"
+  venue: "13th National Conference with International Participation, ELECTRONICA 2022, Bulgaria, Institute of Electrical and Electronics Engineers Inc., 2022, ISBN 9781665481007"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-058"
+  year: 2022
+  type: "Conference Paper"
+  title: "Fake News Detection from Bulgarian Facebook Pages"
+  authors: "Mladenova, T., I. Valova"
+  venue: "10th International Scientific Conference on Engineering, Technologies and Systems (TECHSYS 2021), Bulgaria, American Institute of Physics Inc., 2022, pp. 1-5, ISBN 9780735443976"
+  indexed:
+    - "Scopus"
+  links: []
+
+- id: "pub-059"
+  year: 2022
+  type: "Conference Paper"
+  title: "Solar Irradiance Measurements Using Smart Device"
+  authors: "Hinkov, V., Ts. Mladenova, N. Mihailov"
+  venue: "2022 8th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE), Ruse, Bulgaria, IEEE, 2022, pp. 1-4, ISBN 978-1-6654-0709-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-060"
+  year: 2022
+  type: "Conference Paper"
+  title: "Smart Dairy Farm - Digitalization and Innovation"
+  authors: "Markov, N., S. Stoycheva, M. Hristov, L. Mondeshka, T. Atanasova, I. Blagoev, P. Petrov, I. Valova, N. Valov, Ts. Mladenova"
+  venue: "Proceedings of 8th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE 2022), Ruse, Bulgaria, IEEE, 2022, pp. 1-4, ISBN 978-1-6654-0709-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-061"
+  year: 2022
+  type: "Conference Paper"
+  title: "Research on the Ability to Detect Fake News in Users of Social Networks"
+  authors: "Mladenova, Ts., I. Valova"
+  venue: "International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA), Ankara, Turkey, IEEE, 2022, pp. 1-4, ISBN 978-1-6654-6836-7"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-062"
+  year: 2022
+  type: "Conference Paper"
+  title: "Comparative Analysis Between the Traditional and Nearest Centroid Methods in the K-Nearest Neighbor Algorithm"
+  authors: "Mladenova, Ts., I. Valova"
+  venue: "International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA), Ankara, Turkey, IEEE, 2022, pp. 1-4, ISBN 978-1-6654-6836-7"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-063"
+  year: 2022
+  type: "Conference Paper"
+  title: "Design of a Sensor Measuring Station for Pasture Parameters Remote Monitoring"
+  authors: "Valov, N., B. Evstatiev, Ts. Mladenova, I. Valova, S. Kadirova, N. Markov, S. Stoycheva, T. Atanasova, I. Varlyakov"
+  venue: "International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA 2022), Ankara, Turkey, IEEE, 2022, pp. 1-4, ISBN 978-1-6654-6835-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-064"
+  year: 2022
+  type: "Conference Paper"
+  title: "Design of a Smart System for Monitoring and Management of Pastures and Meadows: The Relational Database Approach"
+  authors: "Mladenova, Ts., I. Valova, N. Valov"
+  venue: "Proceedings of 8th International Conference on Energy Efficiency and Agricultural Engineering (EE&AE 2022), Ruse, Bulgaria, IEEE, 2022, pp. 1-5, ISBN 978-1-6654-0709-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-065"
+  year: 2022
+  type: "Journal Article"
+  title: "COVID-19: Challenges and Opportunities in the Online University Education"
+  authors: "Valova, I., Ts. Mladenova"
+  venue: "International Journal of Advanced Computer Science and Applications (IJACSA), 2022, 13(6), pp. 258-263, ISSN 2156-5570"
+  indexed:
+    - "Scopus"
+    - "Web of Science"
+  links: []
+
+- id: "pub-066"
+  year: 2022
+  type: "PhD Dissertation"
+  title: "Intelligent Methods and Tools for Automated Analysis and Resource Management in Business Processes"
+  authors: "Mladenova, Tsv."
+  venue: "2022, 186 pages"
+  indexed: []
+  links: []
+
+- id: "pub-067"
+  year: 2022
+  type: "Conference Paper – Supervised Student Publication"
+  title: "The Impact of Social Media on Students’ Choice of University and Specialty"
+  authors: "Stafenova, Ts., A. Ivanov, P. Zlatarov, T. Mladenova"
+  venue: "Proceedings of University of Ruse, Ruse, University of Ruse, 2022, pp. 160-165, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-068"
+  year: 2022
+  type: "Conference Paper"
+  title: "Marketing and Management of Digital Cattle Farms"
+  authors: "Markov, N., Ts. Markov, S. Stoycheva, L. Mondeshka, M. Hristov, Ts. Dimitrova, B. Evstatiev, N. Valov, I. Valova, Ts. Mladenova"
+  venue: "Zhivotnovadstvo BG, 2022, Issue 56, pp. 10-12, ISSN 2367-5047"
+  indexed: []
+  links: []
+
+- id: "pub-069"
+  year: 2021
+  type: "Conference Paper"
+  title: "A Review on the Modifications of the K-Nearest Neighbor Algorithm"
+  authors: "Mladenova, Ts., I. Valova"
+  venue: "Proceedings of University of Ruse - 2021, Volume 60, Book 3.2, Ruse, University of Ruse, 2021, pp. 28-32, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-070"
+  year: 2021
+  type: "Conference Paper"
+  title: "Application of Facial Recognition with PCA and Raspberry Pi for Access Control to Luggage Lockers"
+  authors: "Mladenova, Ts., I. Valova, N. Valov"
+  venue: "International Conference Automatics and Informatics (ICAI 2021), Varna, Bulgaria, IEEE, 2021, pp. 141-145, ISBN 978-1-6654-2661-9"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-071"
+  year: 2021
+  type: "Conference Paper"
+  title: "Research on Students' Opinion on the Method of Presenting Teaching Materials"
+  authors: "Mladenova, Ts., Y. Kalmukov, I. Valova"
+  venue: "2021 44th International Convention on Information, Communication and Electronic Technology (MIPRO), Opatija, Croatia, IEEE, 2021, pp. 810-814, ISBN 978-953-233-101-1"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-072"
+  year: 2021
+  type: "Conference Paper"
+  title: "Machine Learning in Business: A Short Overview"
+  authors: "T. Mladenova"
+  venue: "2021 5th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT), Ankara, Turkey, IEEE, 2021, pp. 448-451, ISBN 978-1-6654-4930-4"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-073"
+  year: 2021
+  type: "Conference Paper"
+  title: "A Feature-Weighted Rule for the K-Nearest Neighbor"
+  authors: "T. Mladenova"
+  venue: "2021 5th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT), Ankara, Turkey, IEEE, 2021, pp. 493-497, ISBN 978-1-6654-4930-4"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-074"
+  year: 2021
+  type: "Conference Paper"
+  title: "IoT and Big Data in Animal Farming"
+  authors: "Valov, N., Ts. Mladenova, I. Valova"
+  venue: "5th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT 2021), Ankara, Turkey, IEEE, 2021, pp. 93-96, ISBN 978-1-6654-4930-4"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-075"
+  year: 2021
+  type: "Conference Paper"
+  title: "Analysis of the User Experience in a Web-Based University Staff Publication Management System"
+  authors: "Mladenova, T., Y. Kalmukov, I. Valova"
+  venue: "3rd International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA 2021), Turkey, Institute of Electrical and Electronics Engineers Inc., 2021, ISBN 9781665440585"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-076"
+  year: 2021
+  type: "Conference Paper"
+  title: "Analysis of the KNN Classifier Distance Metrics for Bulgarian Fake News Detection"
+  authors: "Mladenova, T., I. Valova"
+  venue: "3rd International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA 2021), Turkey, Institute of Electrical and Electronics Engineers Inc., 2021, ISBN 9781665440585"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-077"
+  year: 2021
+  type: "Journal Article"
+  title: "HBASE Performance Analysis in Big Datasets Processing"
+  authors: "Mladenova, Ts., Y. Kalmukov, M. Marinov, I. Valova"
+  venue: "TEM Journal, 2021, 10(3), pp. 1051-1057, ISSN 2217-8309"
+  indexed:
+    - "Scopus"
+  links: []
+
+- id: "pub-078"
+  year: 2021
+  type: "Journal Article"
+  title: "Impact of Data Compression on the Performance of Column-oriented Data Stores"
+  authors: "Mladenova, T., Y. Kalmukov, M. Marinov, I. Valova"
+  venue: "International Journal of Advanced Computer Science and Applications (IJACSA), 2021, Vol. 12(7), pp. 416-421, ISSN 2156-5570"
+  indexed:
+    - "Scopus"
+  links: []
+
+- id: "pub-079"
+  year: 2021
+  type: "Journal Article"
+  title: "Analysis and Experimental Study of HDFS Performance"
+  authors: "Kalmukov, Y., M. Marinov, T. Mladenova, I. Valova"
+  venue: "TEM Journal, 2021, 10(2), pp. 806-814, ISSN 2217-8309"
+  indexed:
+    - "Scopus"
+  links: []
+
+- id: "pub-080"
+  year: 2020
+  type: "Conference Paper"
+  title: "Open-Source ERP Systems: An Overview"
+  authors: "Mladenova, T."
+  venue: "2020 International Conference Automatics and Informatics (ICAI), Varna, Bulgaria, IEEE, 2020, pp. 1-6, ISBN 978-1-7281-9309-0"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-081"
+  year: 2020
+  type: "Conference Paper"
+  title: "Software Quality Metrics – Research, Analysis and Recommendation"
+  authors: "Mladenova, T."
+  venue: "2020 International Conference Automatics and Informatics (ICAI), Varna, Bulgaria, IEEE, 2020, pp. 1-5, ISBN 9781728193083"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-082"
+  year: 2020
+  type: "Journal Article"
+  title: "Covid 19 - A Major Cause of Digital Transformation in Education or Just an Evaluation Test"
+  authors: "Mladenova, T., Y. Kalmukov, I. Valova"
+  venue: "TEM Journal, 2020, 9, pp. 1163-1170, ISSN 22178309"
+  indexed:
+    - "Scopus"
+  links: []
+
+- id: "pub-083"
+  year: 2020
+  type: "Conference Paper – Supervised Student Publication"
+  title: "Software for Helping People with Hearing Loss Using Speech Recognition Method"
+  authors: "Venkov, I., T. Mladenova"
+  venue: "Proceedings of University of Ruse, Ruse, University of Ruse, 2020, pp. 141-146, ISSN 1311-3321"
+  indexed: []
+  links: []
+
+- id: "pub-084"
+  year: 2020
+  type: "Conference Paper"
+  title: "Analysis of Students' Attitudes towards Different Types of Learning"
+  authors: "Mladenova, T., Y. Kalmukov, I. Valova"
+  venue: "Proceedings of University of Ruse - 2020, Volume 59, Ruse, University of Ruse, 2020, pp. 30-35, ISBN 2603-4123"
+  indexed: []
+  links: []
+
+- id: "pub-085"
+  year: 2019
+  type: "Conference Paper"
+  title: "Analysis of Software Testing Techniques and Results Measurement Metrics"
+  authors: "Mladenova, T."
+  venue: "Proceedings of University of Ruse, Ruse, Bulgaria, University of Ruse, 2019, pp. 36-42, ISBN 978-954-712-793-7"
+  indexed: []
+  links: []
+
+- id: "pub-086"
+  year: 2019
+  type: "Conference Paper"
+  title: "A Project Management System for Time Planning and Resources Allocation"
+  authors: "Mladenova, T."
+  venue: "2019 42nd International Convention on Information and Communication Technology, Electronics and Microelectronics (MIPRO 2019), Croatia, Institute of Electrical and Electronics Engineers Inc., 2019, pp. 1299-1303, ISBN 978-953233098-4"
+  indexed:
+    - "IEEE Xplore"
+  links: []
+
+- id: "pub-087"
+  year: 2018
+  type: "Conference Paper"
+  title: "Web-Based Project Management System"
+  authors: "Mladenova, Tsv., Y. Kalmukov"
+  venue: "Proceedings of the University of Ruse, Volume 57, Book 3.4, Ruse, 2018, pp. 54-59, ISBN 2603-4123"
+  indexed: []
+  links: []
+
+- id: "pub-088"
+  year: 2018
+  type: "Conference Paper"
+  title: "Developing Web Services in Java with Spring Framework"
+  authors: "Todorov, T., Tsv. Mladenova, Y. Kalmukov"
+  venue: "Proceedings of the University of Ruse, Volume 57, Book 3.4, Ruse, 2018, pp. 71-75, ISBN 2603-4123"
+  indexed: []
+  links: []
+
+- id: "pub-089"
+  year: 2018
+  type: "Conference Paper"
+  title: "Web-Based System for Making Doctor’s Appointments"
+  authors: "Mladenova, Ts., B. Hasan, Y. Kalmukov"
+  venue: "Proceedings of the University of Ruse, Volume 57, Book 3.4, Ruse, 2018, pp. 60-63, ISBN 2603-4123"
+  indexed: []
+  links: []

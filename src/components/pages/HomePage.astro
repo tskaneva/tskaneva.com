@@ -1,0 +1,276 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import PageShell from '../PageShell.astro';
+import * as homeEn from '../../content/pages/index-en.md';
+import * as homeBg from '../../content/pages/index-bg.md';
+import publicationsEn from '../../data/publications-en.yaml';
+import publicationsBg from '../../data/publications-bg.yaml';
+import ProfilePhoto from '../../assets/profile_photo_tskaneva.jpg';
+import AwardPitagor from '../../assets/pitagor.jpg';
+import AwardNts from '../../assets/nts.png';
+import AwardSiitme from '../../assets/siitme.png';
+import AwardSees from '../../assets/sees.png';
+import IeeeLogo from '../../assets/ieee-logo.svg';
+import IeeeStudentBranchLogo from '../../assets/sb-ieee-logo.png';
+import { site } from '../../config/site';
+import { profileLinks } from '../../config/site';
+import { Image } from 'astro:assets';
+import type { Locale } from '../../i18n';
+import { localizedPath, ui } from '../../i18n';
+import SocialLinks from '../SocialLinks.astro';
+import PublicationCard from '../PublicationCard.astro';
+
+interface Props { locale?: Locale }
+const locale = Astro.props.locale ?? "en";
+const copy = ui[locale].home;
+const index = locale === "bg" ? homeBg : homeEn;
+const data = index.frontmatter;
+const Content = index.Content;
+const awardImages = {
+	"/src/assets/pitagor.jpg": AwardPitagor,
+	"/src/assets/nts.png": AwardNts,
+	"/src/assets/siitme.png": AwardSiitme,
+	"/src/assets/sees.png": AwardSees,
+};
+const selectedPublications = (locale === "bg" ? publicationsBg : publicationsEn)
+	.filter((publication) => publication.featured)
+	.sort((a, b) => b.year - a.year || a.id.localeCompare(b.id));
+const normalizeAwardDate = (date: string | number | Date) => date instanceof Date
+	? date.toISOString().slice(0, 10)
+	: String(date);
+const formatAwardDate = (date: string | number | Date) => {
+	const value = normalizeAwardDate(date);
+	return value.length === 4
+	? value
+	: new Intl.DateTimeFormat(locale === "bg" ? "bg-BG" : "en-GB", {
+		day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+	}).format(new Date(`${value}T00:00:00Z`));
+};
+const profileStructuredData = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: data.names,
+	url: site.url,
+	image: new URL(ProfilePhoto.src, site.url).toString(),
+	jobTitle: ui[locale].identity.position,
+	affiliation: {
+		"@type": "CollegeOrUniversity",
+		name: ui[locale].identity.institution,
+	},
+	description: data.subtitle,
+	knowsAbout: data.research_areas,
+	sameAs: profileLinks.map((link) => link.href),
+};
+
+
+---
+
+<MainLayout
+	title={data.names}
+	description={data.subtitle}
+	canonical={localizedPath(locale)}
+	locale={locale}
+	image={ProfilePhoto.src}
+	type="profile"
+	keywords={data.research_areas}
+	structuredData={profileStructuredData}
+>
+	<PageShell>
+		<div slot="left-column">
+			<div class="mb-6 max-w-[220px]">
+				<Image src={ProfilePhoto}
+						alt={ui[locale].identity.fullName} loading="eager"
+				class="mx-auto block h-auto w-full object-contain lg:mx-0"/>
+			</div>
+
+			<p class="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-black">
+				{copy.eyebrow}
+			</p>
+
+			<h1 class="font-serif text-3xl font-bold leading-none tracking-tight text-black md:text-3xl">
+				{data.names}
+			</h1>
+
+			<p class="mt-2 max-w-sm border-t-2 border-black pt-5 text-sm leading-6 text-black">
+				{data.research_areas?.map((keyword) => (
+				<span class="italic text-sm ">
+					{keyword},
+				</span>
+				))}
+			</p>
+
+			{profileLinks.length > 0 && (
+				<>
+				<div class="mt-7 border-t-2 border-black pt-6">
+					<div class="mt-2">
+						<SocialLinks links={profileLinks} />
+					</div>
+				</div>
+				</>
+			)}
+
+			<div class="mt-6 border-t-2 border-black pt-5">
+				<div class="flex items-center gap-4">
+					<img
+						src={IeeeLogo.src}
+						alt="IEEE — Advancing Technology for Humanity"
+						width="92"
+						height="52"
+						loading="lazy"
+						class="h-auto w-[92px] shrink-0"
+					/>
+					<div>
+						<p class="mt-1 font-serif text-xl font-bold leading-tight text-black">{copy.ieeeTitle}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-6 border-t-2 border-black pt-5">
+				<a href={data.student_branch.link} target="_blank" rel="noopener noreferrer" class="mt-4 inline-block" aria-label={data.student_branch.link_label}>
+					<img src={IeeeStudentBranchLogo.src} alt={data.student_branch.logo_alt} width="186" height="105" loading="lazy" class="h-auto w-full max-w-[186px]" />
+				</a>
+				<p class="font-serif text-lg font-bold leading-tight text-black">
+					{data.student_branch.role} <a href={data.student_branch.link} target="_blank" rel="noopener noreferrer" class="link">{data.student_branch.link_label}</a>
+				</p>
+			</div>
+		</div>
+		<div slot="right-column">
+
+			<!-- Intro -->
+			<section class="border-b-2 border-black pb-12">
+				
+
+				<h2 class="max-w-4xl font-serif text-4xl leading-[0.95] tracking-tight text-black md:text-6xl">
+					{data.title}
+				</h2>
+
+				<div class="home-intro mt-6 max-w-2xl text-base leading-7 text-black/80">
+					<Content />
+				</div>
+			</section>
+
+			<!-- Employment history -->
+			<section class="border-b-2 border-black py-8">
+				<div class="grid gap-3 lg:grid-cols-[120px_1fr]">
+					<div><span class="text-s font-bold uppercase tracking-[0.18em]">01</span></div>
+					<div><h3 class="font-serif text-3xl font-bold">{copy.experience}</h3></div>
+				</div>
+				<div class="mt-6 grid gap-3">
+					{data.employment_history.map((job) => (
+						<article class="grid gap-2 border border-black/15 bg-white p-4 sm:grid-cols-[8rem_1fr] sm:gap-4 md:p-5">
+							<p class="text-sm font-bold">{job.period}</p>
+							<div>
+								<p class="text-sm font-semibold">{job.role} · {job.institution}</p>
+								{job.department && <p class="mt-1 text-sm leading-5 text-black/65">{job.department}</p>}
+								{job.description && <p class="mt-2 text-sm leading-5 text-black/70">{job.description}</p>}
+							</div>
+						</article>
+						))}
+				</div>
+			</section>
+
+			<!-- Selected Publications -->
+			<section class="border-b-2 border-black py-8">
+				<div class="grid gap-3 lg:grid-cols-[120px_1fr]">
+				<div>
+					<span class="text-s font-bold uppercase tracking-[0.18em]">
+					02
+					</span>
+				</div>
+
+				<div>
+					<h3 class="font-serif text-3xl font-bold">
+					{copy.selectedPublications}
+					</h3>
+				</div>
+				</div>
+					<div class="mt-6 grid gap-6">
+						{selectedPublications.map((publication, index) => (
+							<PublicationCard publication={publication} locale={locale} index={index} headingLevel={4} />
+						))}
+					</div>
+					<a href={localizedPath(locale, "/publications")} class="link mt-6 ml-auto block w-fit text-right">
+						{copy.viewAllPublications}
+					</a>
+			</section>
+
+			<!-- Projects -->
+			<section class="border-b-2 border-black py-8">
+				<div class="grid gap-3 lg:grid-cols-[120px_1fr]">
+					<div><span class="text-s font-bold uppercase tracking-[0.18em]">03</span></div>
+					<div><h3 class="font-serif text-3xl font-bold">{copy.projects}</h3></div>
+				</div>
+				<div class="mt-6 grid gap-4">
+					{data.projects.map((project) => (
+						<article class="border border-black/15 bg-white p-5 md:p-6">
+							<h4 class="font-serif text-xl font-bold leading-tight">{project.title}</h4>
+							<p class="mt-3 text-sm leading-6 text-black/70">{project.description}</p>
+							<a href={project.url} target="_blank" rel="noopener noreferrer" class="link mt-4 inline-block">{project.link_label}</a>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<!-- Awards -->
+			<section class="py-8">
+				<div class="grid gap-3 lg:grid-cols-[120px_1fr]">
+				<div><span class="text-s font-bold uppercase tracking-[0.18em]">04</span></div>
+				<div>
+					<h3 class="font-serif text-3xl font-bold">{copy.awards}</h3>
+				</div>
+				</div>
+					{data.awards.length > 0 ? (
+						<div class="mt-6 grid gap-4">
+							{data.awards.map((award, awardIndex) => (
+								<article class="grid gap-4 border border-black/15 bg-white p-5 sm:grid-cols-[120px_1fr] md:gap-6 md:p-6">
+									{award.image && awardImages[award.image as keyof typeof awardImages]
+										? <>
+											<button type="button" class="award-image-button" aria-label={locale === "bg" ? `Увеличи снимката: ${award.title}` : `Enlarge image: ${award.title}`} data-open-award={awardIndex}>
+												<Image src={awardImages[award.image as keyof typeof awardImages]} alt={award.title} width={120} height={120} loading="lazy" class="h-24 w-24 cursor-zoom-in object-contain sm:h-[120px] sm:w-[120px]" />
+											</button>
+											<dialog class="award-image-dialog" data-award-dialog={awardIndex} aria-label={award.title}>
+												<button type="button" class="award-image-close" data-close-award aria-label={locale === "bg" ? "Затвори" : "Close"}>×</button>
+												<img src={awardImages[award.image as keyof typeof awardImages].src} alt={award.title} />
+											</dialog>
+										</>
+										: null}
+									<div>
+									<time datetime={normalizeAwardDate(award.date)} class="text-xs font-semibold uppercase tracking-[0.16em] text-black/55">{formatAwardDate(award.date)}</time>
+									<h4 class="mt-2 font-serif text-xl font-bold leading-tight">{award.title}</h4>
+									<p class="mt-2 text-sm leading-6 text-black/70">{award.organization}</p>
+									{award.description && <p class="mt-3 text-sm leading-6 text-black/70">{award.description}</p>}
+									{award.links?.length > 0 && (
+										<div class="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+											{award.links.map((link) => (
+												<a href={link.href} target="_blank" rel="noopener noreferrer" class="link text-sm">{link.label}</a>
+											))}
+										</div>
+									)}
+									</div>
+								</article>
+							))}
+						</div>
+					) : <p class="mt-6 border border-black/15 bg-white p-5 text-black/70 md:p-6">{copy.awardsEmpty}</p>}
+			</section>
+
+		</div>
+	</PageShell>
+</MainLayout>
+
+<script>
+	document.addEventListener('click', (event) => {
+		const target = event.target;
+		if (!(target instanceof Element)) return;
+		const opener = target.closest<HTMLElement>('[data-open-award]');
+		if (opener) {
+			document.querySelector<HTMLDialogElement>(`[data-award-dialog="${opener.dataset.openAward}"]`)?.showModal();
+			return;
+		}
+		const closer = target.closest<HTMLElement>('[data-close-award]');
+		if (closer) {
+			closer.closest('dialog')?.close();
+			return;
+		}
+		if (target instanceof HTMLDialogElement && target.matches('[data-award-dialog]')) target.close();
+	});
+</script>

@@ -1,0 +1,137 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import PageShell from "../PageShell.astro";
+import PublicationCard from "../PublicationCard.astro";
+import { getCollection } from "astro:content";
+import type { Locale } from "../../i18n";
+import { localizedPath, ui } from "../../i18n";
+interface Props { locale?: Locale }
+const locale = Astro.props.locale ?? "en";
+const copy = ui[locale].publications;
+const publications = await getCollection(locale === "bg" ? "publicationsBg" : "publicationsEn");
+const sortedPublications = publications.map((entry) => entry.data).sort((a, b) => b.year - a.year);
+
+// const stats = Object.entries(sortedPublications)
+//   .sort(([a], [b]) => Number(a) - Number(b))
+//   .map(([year, count]) => ({ year, count }));
+
+// const max = Math.max(...stats.map((s) => s.count));
+const years = [...new Set(sortedPublications.map((pub) => pub.year))].sort((a, b) => b - a);
+const types = [...new Set(sortedPublications.map((pub) => pub.type))].sort();
+const indexes = [
+  ...new Set(sortedPublications.flatMap((pub) => pub.indexed)),
+].sort();
+const typeLabel = (type: string) => copy.typeLabels[type as keyof typeof copy.typeLabels] ?? type;
+---
+<MainLayout
+    title={copy.name}
+    description={copy.summary}
+    canonical={localizedPath(locale, "/publications")}
+    locale={locale}
+    keywords={[...copy.keywords]}
+>
+    <PageShell>
+        <Fragment slot="page-name">{copy.name}</Fragment>
+        <Fragment slot="page-title">{copy.title}</Fragment>
+        <Fragment slot="page-summary">{copy.summary}</Fragment>
+        <Fragment slot="one-column">
+            <div class="mb-7 border-y-2 border-black py-6">
+  <div class="grid gap-4 md:grid-cols-[1fr_180px_180px_180px]">
+    <input
+      id="publication-search"
+      type="search"
+      aria-label={copy.search}
+      placeholder={copy.search}
+      class="w-full border border-black bg-transparent px-4 py-3 text-sm outline-none placeholder:text-black/40"
+    />
+
+    <select
+      id="publication-year"
+      aria-label={copy.allYears}
+      class="border border-black bg-transparent px-4 py-3 text-sm uppercase tracking-[0.12em]"
+    >
+      <option value="">{copy.allYears}</option>
+      {years.map((year) => <option value={year}>{year}</option>)}
+    </select>
+
+    <select
+      id="publication-type"
+      aria-label={copy.allTypes}
+      class="border border-black bg-transparent px-4 py-3 text-sm uppercase tracking-[0.12em]"
+    >
+      <option value="">{copy.allTypes}</option>
+      {types.map((type) => <option value={type}>{typeLabel(type)}</option>)}
+    </select>
+
+    <select
+      id="publication-index"
+      aria-label={copy.allIndexes}
+      class="border border-black bg-transparent px-4 py-3 text-sm uppercase tracking-[0.12em]"
+    >
+      <option value="">{copy.allIndexes}</option>
+      {indexes.map((indexing) => <option value={indexing}>{indexing}</option>)}
+    </select>
+  </div>
+
+  <p id="publication-count" role="status" aria-live="polite" data-count-one={copy.count.one} data-count-many={copy.count.many} class="mt-4 text-xs uppercase tracking-[0.18em] text-black/50"></p>
+</div>
+        </Fragment>
+        <Fragment slot="one-column">
+            
+            <div class="grid gap-6">
+            {sortedPublications.map((pub, index) => (
+                <PublicationCard publication={pub} locale={locale} index={index} />
+            ))}
+            </div>
+        </Fragment>
+    </PageShell>
+    <script is:inline data-astro-rerun>
+      (() => {
+        const searchInput = document.querySelector("#publication-search");
+        const yearSelect = document.querySelector("#publication-year");
+        const typeSelect = document.querySelector("#publication-type");
+        const indexSelect = document.querySelector("#publication-index");
+        const countText = document.querySelector("#publication-count");
+        const publications = document.querySelectorAll(".publication-item");
+
+        function filterPublications() {
+            const search = searchInput.value.toLowerCase().trim();
+            const year = yearSelect.value;
+            const type = typeSelect.value;
+            const indexing = indexSelect.value;
+
+            let visibleCount = 0;
+
+            publications.forEach((pub) => {
+            const text = [
+                pub.dataset.title,
+                pub.dataset.authors,
+                pub.dataset.venue,
+            ].join(" ");
+
+            const matchesSearch = !search || text.includes(search);
+            const matchesYear = !year || pub.dataset.year === year;
+            const matchesType = !type || pub.dataset.type === type;
+            const matchesIndex =
+                !indexing || pub.dataset.indexed?.includes(indexing);
+
+            const isVisible =
+                matchesSearch && matchesYear && matchesType && matchesIndex;
+
+            pub.classList.toggle("hidden", !isVisible);
+
+            if (isVisible) visibleCount++;
+            });
+
+            countText.textContent = `${visibleCount} ${visibleCount === 1 ? countText.dataset.countOne : countText.dataset.countMany}`;
+        }
+
+        [searchInput, yearSelect, typeSelect, indexSelect].forEach((element) => {
+            element.addEventListener("input", filterPublications);
+            element.addEventListener("change", filterPublications);
+        });
+
+        filterPublications();
+      })();
+    </script>
+</MainLayout>

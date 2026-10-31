@@ -1,0 +1,31 @@
+---
+import type { Locale } from "../i18n";
+import { ui } from "../i18n";
+interface Props { locale?: Locale }
+const locale = Astro.props.locale ?? "en";
+const copy = ui[locale].common;
+---
+<button
+  id="scroll-to-top"
+  type="button"
+  class="fixed bottom-6 right-6 z-40 hidden border-2 border-black bg-[#fafbfa] px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] text-black shadow-[6px_6px_0_#111] transition hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_#111] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-[#fafbfa]"
+  aria-label={copy.top}
+>
+  {copy.top}
+</button>
+
+<script>
+  function updateScrollToTopVisibility() {
+    const scrollToTopButton = document.querySelector("#scroll-to-top");
+    scrollToTopButton?.classList.toggle("hidden", window.scrollY < 500);
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    document.querySelector("#scroll-to-top")?.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    updateScrollToTopVisibility();
+  });
+
+  window.addEventListener("scroll", updateScrollToTopVisibility, { passive: true });
+</script>

@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/verify-site.mjs",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@rollup/plugin-yaml": "^5.0.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.3.7",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.0"
+  }
+}

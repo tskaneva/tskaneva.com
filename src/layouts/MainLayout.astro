@@ -1,0 +1,69 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import SEO from '../components/SEO.astro';
+import Footer from '../components/Footer.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
+import type { Locale } from '../i18n';
+import { localizedPath } from '../i18n';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  type?: "website" | "profile" | "article";
+  keywords?: string[];
+  robots?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  locale?: Locale;
+}
+
+const seo = Astro.props;
+const locale = Astro.props.locale ?? "en";
+const currentPath = Astro.url.pathname.replace(/^\/bg(?=\/|$)/, "") || "/";
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    {Astro.url.pathname === "/" && (
+      <script is:inline data-astro-rerun>
+        (() => {
+          let preferredLocale;
+          try {
+            preferredLocale = localStorage.getItem("preferred-locale");
+          } catch {
+            // Browser language still works when storage is unavailable.
+          }
+          const languages = navigator.languages?.length ? navigator.languages : [navigator.language];
+          const browserLocale = languages
+            .map((language) => language.toLowerCase().split("-")[0])
+            .find((language) => language === "bg" || language === "en") ?? "en";
+          const locale = preferredLocale === "bg" || preferredLocale === "en"
+            ? preferredLocale
+            : browserLocale;
+          if (locale === "bg") {
+            window.location.replace("/bg/");
+          }
+        })();
+      </script>
+    )}
+    <ClientRouter />
+    <SEO {...seo} />
+    <link rel="alternate" hreflang="en" href={new URL(localizedPath("en", currentPath), "https://tskaneva.com")} />
+    <link rel="alternate" hreflang="bg" href={new URL(localizedPath("bg", currentPath), "https://tskaneva.com")} />
+    <link rel="alternate" hreflang="x-default" href={new URL(localizedPath("en", currentPath), "https://tskaneva.com")} />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="flex min-h-screen flex-col bg-[#fafbfa] text-gray-900 antialiased">
+    <Header locale={locale} />
+    <slot />
+    <Footer locale={locale} />
+    <ScrollToTop locale={locale} />
+  </body>
+</html>

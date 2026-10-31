@@ -1,0 +1,87 @@
+---
+import { site } from "../config/site";
+import ProfilePhoto from "../assets/profile_photo_tskaneva.jpg";
+import type { Locale } from "../i18n";
+import { ui } from "../i18n";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+  type?: "website" | "profile" | "article";
+  keywords?: string[];
+  robots?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  locale?: Locale;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.pathname,
+  image = ProfilePhoto.src,
+  type = "website",
+  keywords = [],
+  robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  structuredData,
+  locale = "en",
+} = Astro.props;
+
+const copy = ui[locale];
+const pageTitle = title
+  ? title === copy.identity.fullName || title === copy.identity.brandName || title === `Dr. ${copy.identity.fullName}`
+    ? title
+    : `${title} | ${copy.identity.brandName}`
+  : copy.seo.title;
+const pageDescription = description ?? copy.seo.description;
+const canonicalUrl = new URL(canonical, site.url).toString();
+const imageUrl = new URL(image, site.url).toString();
+const allKeywords = [...new Set([...copy.seo.keywords, ...keywords])];
+const sameAs = Object.values(site.social);
+const identity = ui[locale].identity;
+
+const defaultStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.author,
+  url: site.url,
+  jobTitle: identity.position,
+  affiliation: {
+    "@type": "CollegeOrUniversity",
+    name: identity.institution,
+  },
+  knowsAbout: copy.seo.keywords.slice(1),
+  sameAs,
+};
+
+const jsonLd = structuredData ?? defaultStructuredData;
+---
+
+<title>{pageTitle}</title>
+<meta name="description" content={pageDescription} />
+<meta name="author" content={site.author} />
+<meta name="keywords" content={allKeywords.join(", ")} />
+<meta name="robots" content={robots} />
+<link rel="canonical" href={canonicalUrl} />
+
+<meta property="og:site_name" content={identity.fullName} />
+<meta property="og:locale" content={identity.ogLocale} />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:alt" content={identity.profileImageAlt} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
+<meta name="twitter:image" content={imageUrl} />
+
+<meta name="citation_author" content={site.author} />
+<meta name="profile:first_name" content="Tsvetelina" />
+<meta name="profile:last_name" content="Kaneva" />
+<meta name="profile:username" content="tskaneva" />
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

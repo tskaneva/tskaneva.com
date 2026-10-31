@@ -1,0 +1,223 @@
+- id: "stu-001"
+  year: 2024
+  level: "Bachelor"
+  title: "An Information System for Livestock and Pasture Surveillance"
+  names: "Aleksandar Ivanov"
+  links: []
+- id: "stu-002"
+  year: 2026
+  level: "Bachelor"
+  title: "Development of a Pixel Clicker Video Game with Idle Functionality"
+  names: "Miroslav Pavlov"
+  links: []
+
+- id: "stu-003"
+  year: 2026
+  level: "Bachelor"
+  title: "Information System for Monitoring and Analysis of Residential Photovoltaic Installations"
+  names: "Mesru Fikret"
+  links: []
+
+- id: "stu-004"
+  year: 2026
+  level: "Bachelor"
+  title: "Development of a Web Application for Intelligent Note Creation and Management Using LLM Models"
+  names: "Nerdzhan Imam"
+  links: []
+
+- id: "stu-005"
+  year: 2026
+  level: "Bachelor"
+  title: "Development of an Information System for Management and Monitoring of a Driving School"
+  names: "Ivaylo Tsolov"
+  links: []
+
+- id: "stu-006"
+  year: 2026
+  level: "Bachelor"
+  title: "Application for Editing Music Files"
+  names: "Preslav Georgiev"
+  links: []
+
+- id: "stu-007"
+  year: 2026
+  level: "Bachelor"
+  title: "Development of an Augmented Reality System to Support Communication in Children with Autism"
+  names: "Deyan Dzhumaliyski"
+  links: []
+
+- id: "stu-008"
+  year: 2026
+  level: "Bachelor"
+  title: "Web-Based F1 Season Simulator"
+  names: "Biser Tsenkov"
+  links: []
+
+- id: "stu-009"
+  year: 2026
+  level: "Bachelor"
+  title: "Development of a 2D Game for Connecting Electrical Circuits"
+  names: "Borislav Borisov"
+  links: []
+
+- id: "stu-010"
+  year: 2026
+  level: "Bachelor"
+  title: "Methodology for Automatic Assessment of Urbanization Degree through Satellite Image Analysis"
+  names: "Kristiyan Petrov"
+  links: []
+
+- id: "stu-011"
+  year: 2026
+  level: "Bachelor"
+  title: "Web-Based System for Discovering Electric Vehicle Charging Stations"
+  names: "Lyudmil Nikolaev"
+  links: []
+
+- id: "stu-012"
+  year: 2026
+  level: "Bachelor"
+  title: "Design and Development of an IoT Assistant with Machine Learning to Support the Daily Lives of People with Visual Impairments"
+  names: "Deyan Sabev"
+  links: []
+
+- id: "stu-013"
+  year: 2026
+  level: "Bachelor"
+  title: "Design and Development of an Automated and Optimized University Timetable Management System"
+  names: "Plamen Hristov"
+  links: []
+
+- id: "stu-014"
+  year: 2026
+  level: "Master"
+  title: "Development of a Distributed Intelligent Monitoring System for the Bee Colony Ecosystem Using Artificial Intelligence and Wireless Communication Technology"
+  names: "Emil Vasilev"
+  links: []
+
+- id: "stu-015"
+  year: 2026
+  level: "Bachelor"
+  title: "Development of a Web-Based Blog for Book Authors"
+  names: "Radoslav Ivanov"
+  links: []
+
+- id: "stu-016"
+  year: 2024
+  level: "Bachelor"
+  title: "System for reporting and examining physical indicators of the human body"
+  names: "Amir Omar"
+  links: []
+
+- id: "stu-017"
+  year: 2025
+  level: "Bachelor"
+  title: "Development and analysis of an information system for servicing work in a beekeeping farm"
+  names: "Emil Vasilev"
+  links: []
+
+- id: "stu-018"
+  year: 2025
+  level: "Bachelor"
+  title: "Development of a desktop-based 2D platform video game"
+  names: "Enis Husein"
+  links: []
+
+- id: "stu-019"
+  year: 2025
+  level: "Bachelor"
+  title: "Web-based platform for selling and renting cars"
+  names: "Ivailo Enchev"
+  links: []
+
+- id: "stu-020"
+  year: 2024
+  level: "Bachelor"
+  title: "Desktop-based survival game"
+  names: "Mario Nikolov"
+  links: []
+
+- id: "stu-021"
+  year: 2024
+  level: "Bachelor"
+  title: "Development of a web-based strategy game"
+  names: "Nikolay Nedelchev"
+  links: []
+
+- id: "stu-022"
+  year: 2025
+  level: "Bachelor"
+  title: "Development of a web-based platform for hiring craftsmen"
+  names: "Spas Spasov"
+  links: []
+
+- id: "stu-023"
+  year: 2025
+  level: "Bachelor"
+  title: "Development of software for recognizing receipts in Bulgarian"
+  names: "Stanimir Ivanov"
+  links: []
+
+- id: "stu-024"
+  year: 2025
+  level: "Bachelor"
+  title: "Development of a system for purchasing tickets for public transport"
+  names: "Tsvetelina Dudeva"
+  links: []
+
+- id: "stu-025"
+  year: 2024
+  level: "Bachelor"
+  title: "Deraigo - a web-based system for studying and self-studying in Japanese"
+  names: "Denislav Tanchev"
+  links: []
+
+- id: "stu-026"
+  year: 2024
+  level: "Bachelor"
+  title: "Development of a mobile application for a historical calendar"
+  names: "Marian Hristov"
+  links: []
+
+- id: "stu-027"
+  year: 2023
+  level: "Not specified"
+  title: "Music store web application"
+  names: "Tsvetelin Iliev"
+  links: []
+- id: "stu-028"
+  year: 2023
+  level: "Bachelor"
+  title: "Design and development of a Japanese language learning application"
+  names: "Vasil Zdravkov"
+  links: []
+- id: "stu-029"
+  year: 2022
+  level: "Not specified"
+  title: "Multimedia player with music detector"
+  names: "Martin Angelov"
+  links: []
+- id: "stu-030"
+  year: 2022
+  level: "Bachelor"
+  title: "Smart home organizer"
+  names: "Ilona Uzunova"
+  links: []
+- id: "stu-031"
+  year: 2021
+  level: "Bachelor"
+  title: "Research on the performance of relational and non-relational database management systems"
+  names: "Dzhuliana Vasileva"
+  links: []
+- id: "stu-032"
+  year: 2020
+  level: "Bachelor"
+  title: "System for reporting and checking laboratory exercises"
+  names: "Nikola Bratovanov"
+  links: []
+- id: "stu-033"
+  year: 2020
+  level: "Bachelor"
+  title: "Software to help people with hearing impairments using the visual speech recognition method"
+  names: "Ivalin Venkov"
+  links: []

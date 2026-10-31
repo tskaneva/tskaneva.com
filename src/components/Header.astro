@@ -1,0 +1,116 @@
+---
+import type { Locale } from '../i18n';
+import { alternateLocale, localeNames, localizedPath, ui } from '../i18n';
+
+interface Props { locale?: Locale }
+const locale = Astro.props.locale ?? "en";
+const copy = ui[locale];
+const otherLocale = alternateLocale(locale);
+const currentPath = Astro.url.pathname.replace(/^\/bg(?=\/|$)/, "") || "/";
+
+// const navPages = (await getCollection('pages'))
+//   .filter((p: { data: { nav: any; }; }) => p.data.nav)
+//   .sort((a: { data: { order: number; }; }, b: { data: { order: number; }; }) => a.data.order - b.data.order);
+
+const staticLinks = [
+  { label: copy.nav.research, href: localizedPath(locale, '/research') },
+  { label: copy.nav.publications, href: localizedPath(locale, '/publications') },
+  { label: copy.nav.teaching, href: localizedPath(locale, '/teaching') },
+  { label: copy.nav.contact, href: localizedPath(locale, '/contact') },
+];
+
+// const dynamicLinks = navPages.map((p: { data: { title: any; slug: any; }; }) => ({
+//   label: p.data.title,
+//   href: `/${p.data.slug}`,
+// }));
+
+// const allLinks = [...staticLinks, ...dynamicLinks];
+const allLinks = staticLinks;
+const isCurrentPage = (href: string) => (Astro.url.pathname.replace(/\/$/, "") || "/") === href;
+---
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-black focus:bg-white focus:px-4 focus:py-3 focus:font-semibold">{copy.common.skipToContent}</a>
+<header class="sticky top-0 z-40 border-b-2 border-black bg-[#fafbfa]/95 backdrop-blur">
+    <div class="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 lg:px-0">        
+    <a 
+    href={localizedPath(locale)}
+    class="relative font-serif text-xl font-bold tracking-tight text-black after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full"
+    >
+    {copy.identity.brandName}
+    </a>
+
+    <nav class="hidden items-center gap-8 lg:flex" aria-label={copy.common.mainNavAria}>
+      {allLinks.map((link) => (
+        <a 
+          href={link.href} 
+          aria-current={isCurrentPage(link.href) ? "page" : undefined}
+          class="relative text-sm font-semibold uppercase tracking-[0.16em] text-black after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href={localizedPath(otherLocale, currentPath)}
+        lang={otherLocale}
+        hreflang={otherLocale}
+        data-locale-choice={otherLocale}
+        class="language-switch border border-black px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] transition"
+        aria-label={`${copy.common.language}: ${localeNames[otherLocale]}`}
+      >
+        {otherLocale.toUpperCase()}
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-3 lg:hidden">
+      <a href={localizedPath(otherLocale, currentPath)} lang={otherLocale} hreflang={otherLocale} data-locale-choice={otherLocale} class="language-switch border border-black px-3 py-2 text-xs font-bold uppercase transition">
+        {otherLocale.toUpperCase()}
+      </a>
+      <button id="mobile-menu-toggle" type="button" class="border-2 border-black px-3 py-2 text-xs font-bold uppercase" aria-controls="mobile-menu" aria-expanded="false">{copy.common.menu}</button>
+    </div>
+
+  </div>
+
+  <nav 
+    id="mobile-menu" 
+    class="hidden border-t-2 border-black bg-[#fafbfa] px-6 py-4 lg:hidden" 
+    aria-label={copy.common.mobileNavAria}
+  >
+    {allLinks.map((link) => (
+      <a 
+        href={link.href} 
+        aria-current={isCurrentPage(link.href) ? "page" : undefined}
+        class="block border-b border-black/30 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-black last:border-b-0"
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const toggle = document.querySelector("#mobile-menu-toggle");
+    const menu = document.querySelector("#mobile-menu");
+    toggle?.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      menu?.classList.toggle("hidden", isOpen);
+    });
+    menu?.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        menu.classList.add("hidden");
+        toggle?.setAttribute("aria-expanded", "false");
+        toggle?.focus();
+      }
+    });
+    document.querySelectorAll<HTMLElement>("[data-locale-choice]").forEach((link) => {
+      link.addEventListener("click", () => {
+        try {
+          localStorage.setItem("preferred-locale", link.dataset.localeChoice ?? "en");
+        } catch {
+          // The language link still works when storage is unavailable.
+        }
+      });
+    });
+  });
+</script>

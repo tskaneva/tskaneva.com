@@ -1,0 +1,89 @@
+---
+import { profileLinks } from "../config/site";
+import type { Locale } from "../i18n";
+import { localizedPath, ui } from "../i18n";
+import BrandLinks from "./BrandLinks.astro";
+
+interface Props { locale?: Locale }
+const locale = Astro.props.locale ?? "en";
+const copy = ui[locale];
+const currentYear = new Date().getFullYear();
+const navLinks = [
+  { label: copy.nav.research, href: localizedPath(locale, "/research") },
+  { label: copy.nav.publications, href: localizedPath(locale, "/publications") },
+  { label: copy.nav.teaching, href: localizedPath(locale, "/teaching") },
+  { label: copy.nav.contact, href: localizedPath(locale, "/contact") },
+];
+
+---
+
+<footer class="border-t-2 border-black bg-[#fafbfa] text-black">
+  <div class="mx-auto grid max-w-6xl gap-8 px-6 py-8 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr] lg:px-0 lg:py-10">
+    <section>
+      <a href={localizedPath(locale)} class="font-serif text-3xl font-bold leading-none tracking-tight">
+        {copy.identity.brandName}
+      </a>
+      <p class="mt-5 max-w-xl text-sm leading-6 text-black/70">
+        {copy.footer.bio}
+      </p>
+    </section>
+
+    <nav aria-label={copy.footer.pagesAria}>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-black/50">
+        {copy.footer.pages}
+      </p>
+      <div class="mt-5 grid gap-3">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="relative w-fit text-sm font-semibold uppercase tracking-[0.14em] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </nav>
+
+    <section>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-black/50">{copy.footer.contactDetails}</p>
+      <div class="mt-5 grid gap-3 text-sm leading-6">
+        <p><span class="font-semibold">{copy.footer.email}:</span> <a class="underline underline-offset-4" href="mailto:mail@tskaneva.com">mail@tskaneva.com</a></p>
+        <p><span class="font-semibold">{ui[locale].contact.office}:</span> 6.408Б, {ui[locale].contact.institution}</p>
+        <p><span class="font-semibold">{ui[locale].contact.officeHours}:</span> {ui[locale].contact.officeHoursText}</p>
+      </div>
+    </section>
+
+    <nav aria-label={copy.footer.profilesAria}>
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-black/50">
+        {copy.footer.profiles}
+      </p>
+      <div class="mt-5 grid gap-3">
+        {profileLinks.filter((link) => !["linkedin", "github"].includes(link.label.toLowerCase())).map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="relative w-fit text-sm font-semibold uppercase tracking-[0.14em] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="https://publications.uni-ruse.bg/author/tskaneva"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="relative w-fit text-sm font-semibold uppercase tracking-[0.14em] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all hover:after:w-full"
+        >
+          {copy.footer.publicationsProfile}
+        </a>
+        <BrandLinks />
+      </div>
+    </nav>
+  </div>
+
+  <div class="border-t-2 border-black">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-5 text-xs font-semibold uppercase tracking-[0.16em] text-black/55 lg:px-0">
+      <p>&copy; {currentYear} {copy.identity.brandName}</p>
+    </div>
+  </div>
+</footer>

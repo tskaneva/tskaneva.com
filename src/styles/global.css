@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fafbfa;
+  --text: #111111;
+  --muted: #66615a;
+  --line: #111111;
+  --accent: #d6dedb;
+  --link-color: #b91c1c;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, Arial, sans-serif;
+}
+
+::selection {
+  background: #c8ded8;
+  color: #111111;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+nav a[aria-current="page"] {
+  color: var(--link-color);
+}
+
+a.language-switch:hover,
+a.language-switch:focus-visible {
+  background-color: #000;
+  color: #fff !important;
+}
+
+:where(a, button, input, select):focus-visible {
+  outline: 3px solid #5c2d91;
+  outline-offset: 3px;
+}
+
+@layer components {
+  .profile-link {
+    @apply relative text-sm font-semibold uppercase tracking-[0.16em] text-black
+    after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0
+    after:bg-black after:transition-all hover:after:w-full;
+  }
+}
+
+.link{
+    text-decoration: underline;
+    color: var(--link-color)
+}
+.link:hover{
+    color: darkred;
+}
+
+.laboratory-content ul {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+:is(.project-content, .course-content) p + p {
+  margin-top: 0.75rem;
+}
+
+:is(.project-content, .course-content) :is(ul, ol) {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+:is(.project-content, .course-content) ul { list-style: disc; }
+:is(.project-content, .course-content) ol { list-style: decimal; }
+
+:is(.project-content, .course-content) a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.home-intro p + p {
+  margin-top: 0.75rem;
+}
+
+.home-intro a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.home-intro a:hover,
+.home-intro a:focus-visible {
+  color: var(--link-hover-color, var(--link-color));
+  text-decoration-thickness: 2px;
+}
+
+.brand-icon-link svg {
+  transition: color 160ms ease;
+}
+
+.brand-icon-link:hover svg,
+.brand-icon-link:focus-visible svg {
+  color: #dc2626;
+}
+
+.award-image-button {
+  width: fit-content;
+  cursor: zoom-in;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.award-image-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  max-width: min(92vw, 70rem);
+  max-height: 92vh;
+  padding: 1rem;
+  border: 1px solid rgb(0 0 0 / 15%);
+  background: white;
+  box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 30%);
+}
+
+.award-image-dialog::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+
+.award-image-dialog img {
+  display: block;
+  max-width: calc(92vw - 2rem);
+  max-height: calc(92vh - 2rem);
+  object-fit: contain;
+}
+
+.award-image-close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.65rem;
+  z-index: 1;
+  border: 0;
+  background: white;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.laboratory-content a {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+@layer components {
+  .social-link {
+    @apply inline-flex items-center justify-center
+    px-5 py-3
+    border border-transparent
+    text-sm font-semibold uppercase tracking-[0.12em]
+    no-underline
+  }
+
+  .social-link::after {
+    content: none;
+  }
+
+  .social-link:hover,
+  .social-link:focus,
+  .social-link:active,
+  .social-link:visited {
+    text-decoration: none;
+  }
+
+}
+.social-link::after {
+    content: none;
+  }
+
+  .social-link:hover,
+  .social-link:focus,
+  .social-link:active,
+  .social-link:visited {
+    text-decoration: none;
+  }
+
+  .social-link-googlescholar {
+    @apply bg-[#4285f4] border-[#4285f4] text-white hover:bg-transparent hover:text-[#4285f4];
+  }
+
+  .social-link-scopus {
+    @apply bg-[#e9711c] border-[#e9711c] text-white hover:bg-transparent hover:text-[#e9711c];
+  }
+
+  .social-link-orcid {
+    @apply bg-[#a6ce39] border-[#a6ce39] text-black hover:bg-transparent hover:text-[#a6ce39];
+  }
+
+  .social-link-researchgate {
+    @apply bg-[#00ccbb] border-[#00ccbb] text-black hover:bg-transparent hover:text-[#00ccbb];
+  }
+
+  .social-link-webofscience {
+    @apply bg-[#5c2d91] border-[#5c2d91] text-white hover:bg-transparent hover:text-[#5c2d91];
+  }
+
+  .social-link-linkedin {
+    @apply bg-[#0a66c2] border-[#0a66c2] text-white hover:bg-transparent hover:text-[#0a66c2];
+  }
+
+  .social-link-github {
+    @apply bg-[#24292f] border-[#24292f] text-white hover:bg-transparent hover:text-[#24292f];
+  }

@@ -1,0 +1,44 @@
+- title: "Machine Learning & Artificial Intelligence"
+  order: 1
+  keywords:
+    - Deep learning
+    - Generative adversarial networks (GANs)
+    - Synthetic data generation
+    - Time-series forecasting
+    - Predictive analytics
+    - Neural networks
+
+- title: "Energy Systems"
+  order: 2
+  keywords:
+    - Photovoltaic power forecasting
+    - Energy consumption prediction
+    - Renewable energy analytics
+    - PV performance analysis
+    - Smart monitoring systems
+
+- title: "Computer Vision"
+  order: 3
+  keywords:
+    - Object detection
+    - Image processing
+    - Feature extraction
+    - Visual analytics
+
+- title: "IoT Systems"
+  order: 4
+  keywords:
+    - Intelligent IoT
+    - Edge Computing
+    - Data monitoring
+    - Smart Buildings
+    - Home Automation
+    - AI-assisted Automation
+    - Embedded Intelligence
+
+- title: "Intelligent Systems"
+  order: 5
+  keywords:
+    - Automated programming assessment
+    - Information systems
+    - Intelligent feedback systems

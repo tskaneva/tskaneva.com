@@ -1,0 +1,43 @@
+<main id="main-content" tabindex="-1" class="bg-[#fafbfa]">
+  <div class="mx-auto max-w-6xl grid lg:grid-cols-[420px_1fr]">
+    
+    {Astro.slots.has("page-title") && (
+      <section class="lg:col-span-2 border-b-2 border-black px-6 py-8 lg:px-0">
+        <div class="max-w-5xl">
+            <p class="mb-3 text-sm uppercase tracking-[0.25em] text-black/50">
+            <slot name="page-name"></slot>
+            </p>
+
+            <h1 class="font-serif text-5xl font-bold leading-none tracking-tight md:text-7xl">
+                <slot name="page-title"></slot>
+            </h1>
+
+            <p class="mt-6 max-w-5xl text-base leading-7 text-black/80">
+            <slot name="page-summary"></slot>
+            </p>
+        </div>
+      </section>
+    )}
+
+    {Astro.slots.has("left-column") && (
+    <section class="border-b-2 border-black bg-[#fafbfa] lg:min-h-[calc(100vh-5rem)] lg:border-b-0 lg:border-r-2">
+		<div class="flex h-full flex-col justify-between pr-6 py-8 lg:pr-10 lg:py-8">
+          <slot name="left-column" />
+        </div>
+      </section>
+    )}
+
+    {Astro.slots.has("right-column") && (
+        <section class="mx-auto flex min-h-screen max-w-4xl flex-col pl-6 py-8 lg:pl-12 lg:py-8">
+            <slot name="right-column" />
+        </section>
+    )}
+
+    {Astro.slots.has("one-column") && (
+      <section class="lg:col-span-2 px-6 pb-8 lg:px-0 lg:pb-10">
+        <slot name="one-column" />
+      </section>
+    )}
+
+  </div>
+</main>
