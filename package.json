@@ -9,6 +9,8 @@
     "dev": "astro dev",
     "build": "astro build && node scripts/verify-site.mjs",
     "preview": "astro preview",
+    "cf:dev": "pnpm run build && wrangler dev",
+    "deploy": "pnpm run build && wrangler deploy",
     "astro": "astro"
   },
   "dependencies": {
@@ -17,5 +19,8 @@
     "astro": "^6.3.7",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.156.0"
   }
 }
