@@ -1,0 +1,15 @@
+name: Sync mirror
+on:
+  push:
+    branches: [main]
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - run: git push --force "https://x-access-token:${MIRROR_TOKEN}@github.com/${MIRROR_REPO}.git" main:main
+        env:
+          MIRROR_TOKEN: ${{ secrets.MIRROR_TOKEN }}
+          MIRROR_REPO: ${{ secrets.MIRROR_REPO }}
