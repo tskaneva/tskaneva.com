@@ -9,16 +9,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - name: Debug secrets (temporary)
-        run: |
-          echo "token length: ${#MIRROR_TOKEN}, repo length: ${#MIRROR_REPO}"
-          curl -s -o /dev/null -w "api status: %{http_code}\n" -H "Authorization: Bearer ${MIRROR_TOKEN}" "https://api.github.com/repos/${MIRROR_REPO}"
-          echo "token sha256: $(printf %s "${MIRROR_TOKEN}" | sha256sum | cut -c1-12)"
-          curl -s -o /dev/null -w "git read status: %{http_code}\n" -u "x-access-token:${MIRROR_TOKEN}" "https://github.com/${MIRROR_REPO}.git/info/refs?service=git-upload-pack"
-          curl -s -o /dev/null -w "git write status: %{http_code}\n" -u "x-access-token:${MIRROR_TOKEN}" "https://github.com/${MIRROR_REPO}.git/info/refs?service=git-receive-pack"
-        env:
-          MIRROR_TOKEN: ${{ secrets.MIRROR_TOKEN }}
-          MIRROR_REPO: ${{ secrets.MIRROR_REPO }}
+          persist-credentials: false
       - run: git push --force "https://x-access-token:${MIRROR_TOKEN}@github.com/${MIRROR_REPO}.git" main:main
         env:
           MIRROR_TOKEN: ${{ secrets.MIRROR_TOKEN }}
